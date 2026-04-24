@@ -1,0 +1,26 @@
+{
+  "name": "pi-astro-mcp",
+  "version": "1.0.0",
+  "description": "Pi extension that connects to the Astro Docs MCP server and exposes a search_astro_docs tool",
+  "keywords": [
+    "pi-package",
+    "astro",
+    "mcp",
+    "model-context-protocol",
+    "documentation",
+    "coding-agent"
+  ],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "pi": {
+    "extensions": ["./extensions"]
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0"
+  },
+  "peerDependencies": {
+    "@mariozechner/pi-coding-agent": "*",
+    "typebox": "*"
+  }
+}
