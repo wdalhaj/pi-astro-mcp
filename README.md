@@ -32,12 +32,6 @@ That's it. `pi install` clones the repo and runs `npm install` automatically.
 pi install git:github.com/wdalhaj/pi-astro-mcp@v1.0.0
 ```
 
-**npm (once published):**
-
-```bash
-pi install npm:pi-astro-mcp
-```
-
 **Local path (for development):**
 
 ```bash
@@ -144,7 +138,7 @@ git push && git push --tags
 npm publish
 ```
 
-Users update with `pi update git:github.com/wdalhaj/pi-astro-mcp` (or `pi update npm:pi-astro-mcp` once published to npm).
+Users update with `pi update git:github.com/wdalhaj/pi-astro-mcp`.
 
 ## License
 
