@@ -18,10 +18,33 @@ npm install -g @mariozechner/pi-coding-agent
 ## Install
 
 ```bash
+pi install git:github.com/wdalhaj/pi-astro-mcp
+```
+
+That's it. `pi install` clones the repo and runs `npm install` automatically.
+
+<details>
+<summary>Other install methods</summary>
+
+**Pin to a specific version (tag or commit):**
+
+```bash
+pi install git:github.com/wdalhaj/pi-astro-mcp@v1.0.0
+```
+
+**npm (once published):**
+
+```bash
 pi install npm:pi-astro-mcp
 ```
 
-That's it. `pi install` fetches the package and its dependencies automatically.
+**Local path (for development):**
+
+```bash
+pi install /path/to/pi-astro-mcp
+```
+
+</details>
 
 ## Usage
 
@@ -61,10 +84,10 @@ curl -s -o /dev/null -w "%{http_code}" https://mcp.docs.astro.build/mcp
 
 **"Cannot find module" errors**
 
-Ensure dependencies installed correctly:
+Reinstall to re-fetch dependencies:
 
 ```bash
-pi install npm:pi-astro-mcp   # reinstalls and runs npm install
+pi install git:github.com/wdalhaj/pi-astro-mcp
 ```
 
 **Extension not loading**
@@ -78,13 +101,13 @@ pi list
 If it doesn't appear, reinstall. If it does appear but doesn't work, try:
 
 ```bash
-pi -e npm:pi-astro-mcp   # test without auto-discovery
+pi -e git:github.com/wdalhaj/pi-astro-mcp   # test without auto-discovery
 ```
 
 ## Uninstall
 
 ```bash
-pi remove npm:pi-astro-mcp
+pi remove git:github.com/wdalhaj/pi-astro-mcp
 ```
 
 ## Development
@@ -92,7 +115,7 @@ pi remove npm:pi-astro-mcp
 Clone and test locally:
 
 ```bash
-git clone https://github.com/<your-user>/pi-astro-mcp.git
+git clone https://github.com/wdalhaj/pi-astro-mcp.git
 cd pi-astro-mcp
 npm install
 
@@ -100,7 +123,7 @@ npm install
 pi -e ./extensions/index.ts
 
 # Or install as a local package
-pi install ./path/to/pi-astro-mcp
+pi install /path/to/pi-astro-mcp
 ```
 
 ## How It Works
@@ -121,7 +144,7 @@ git push && git push --tags
 npm publish
 ```
 
-Users update with `pi update npm:pi-astro-mcp`.
+Users update with `pi update git:github.com/wdalhaj/pi-astro-mcp` (or `pi update npm:pi-astro-mcp` once published to npm).
 
 ## License
 

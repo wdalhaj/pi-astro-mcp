@@ -4,7 +4,7 @@
   "description": "Pi extension that connects to the Astro Docs MCP server and exposes a search_astro_docs tool",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wdalhaj/pi-astro-mcp.git"
+    "url": "git+https://github.com/wdalhaj/pi-astro-mcp.git"
   },
   "readme": "README.md",
   "keywords": [
